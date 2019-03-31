@@ -8,4 +8,5 @@ RUN npm run build
 
 # Merge to server and serve
 FROM nginx
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
